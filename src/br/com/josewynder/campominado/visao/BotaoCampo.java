@@ -1,4 +1,4 @@
-package br.com.cod3r.cm.visao;
+package br.com.josewynder.campominado.visao;
 
 import java.awt.Color;
 import java.awt.event.MouseEvent;
@@ -7,9 +7,9 @@ import java.awt.event.MouseListener;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 
-import br.com.cod3r.cm.modelo.Campo;
-import br.com.cod3r.cm.modelo.CampoEvento;
-import br.com.cod3r.cm.modelo.CampoObservador;
+import br.com.josewynder.campominado.modelo.Campo;
+import br.com.josewynder.campominado.modelo.CampoEvento;
+import br.com.josewynder.campominado.modelo.CampoObservador;
 
 @SuppressWarnings("serial")
 public class BotaoCampo extends JButton 

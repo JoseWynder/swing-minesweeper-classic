@@ -1,4 +1,4 @@
-package br.com.cod3r.cm.visao;
+package br.com.josewynder.campominado.visao;
 
 import java.awt.GridLayout;
 
@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-import br.com.cod3r.cm.modelo.Tabuleiro;
+import br.com.josewynder.campominado.modelo.Tabuleiro;
 
 @SuppressWarnings("serial")
 public class PainelTabuleiro extends JPanel {

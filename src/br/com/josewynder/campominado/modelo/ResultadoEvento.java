@@ -1,4 +1,4 @@
-package br.com.cod3r.cm.modelo;
+package br.com.josewynder.campominado.modelo;
 
 public class ResultadoEvento {
 
