@@ -1,11 +1,10 @@
 package br.com.josewynder.campominado.visao;
 
-import java.awt.Color;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
+import javax.swing.*;
 
 import br.com.josewynder.campominado.modelo.Campo;
 import br.com.josewynder.campominado.modelo.CampoEvento;
@@ -16,9 +15,12 @@ public class BotaoCampo extends JButton
 	implements CampoObservador, MouseListener {
 
 	private final Color BG_PADRAO =new Color(184, 184, 184);
-	private final Color BG_MARCAR =new Color(8, 179, 247);
-	private final Color BG_EXPLODIR =new Color(189, 66, 68);
+	private final Color BG_MARCAR =new Color(184, 184, 184);
+	private final Color BG_EXPLODIR =new Color(217, 29, 32);
 	private final Color TEXTO_VERDE =new Color(0, 100, 0);
+
+	private static final Icon MARCADO_ICON = carregarIconeMarcado();
+	private static final Icon BOMBA_ICON = carregarIconeBomba();
 
 	private Campo campo;
 	
@@ -31,7 +33,21 @@ public class BotaoCampo extends JButton
 		addMouseListener(this);
 		campo.registrarObservador(this);
 	}
-	
+
+	private static Icon carregarIconeMarcado() {
+		ImageIcon icon = new ImageIcon(BotaoCampo.class.getResource("/br/com/josewynder/campominado/resources/images/minesweeper_flag.png"));
+		Image img = icon.getImage()
+				.getScaledInstance(48, 48, Image.SCALE_DEFAULT);
+		return new ImageIcon(img);
+	}
+
+	private static Icon carregarIconeBomba() {
+		ImageIcon icon = new ImageIcon(BotaoCampo.class.getResource("/br/com/josewynder/campominado/resources/images/bomb.png"));
+		Image img = icon.getImage()
+				.getScaledInstance(45, 45, Image.SCALE_DEFAULT);
+		return new ImageIcon(img);
+	}
+
 	@Override
 	public void eventoOcorreu(Campo campo, CampoEvento evento) {
 		switch(evento) {
@@ -59,19 +75,21 @@ public class BotaoCampo extends JButton
 		setBorder(BorderFactory.createBevelBorder(0));
 		setBackground(BG_PADRAO);
 		setText("");
+		setIcon(null);
 	}
 
 	private void aplicarEstiloExplodir() {
 		setBackground(BG_EXPLODIR);
 		setForeground(Color.WHITE);
-		setText("X");
+		setText("");
+		setIcon(BOMBA_ICON);
 	}
 
 	private void aplicarEstiloMarcar() {
 		setBackground(BG_MARCAR);
 		setForeground(Color.BLACK);
-		setText("M");
-//		setIcon();
+		setText("");
+		setIcon(MARCADO_ICON);
 	}
 
 	private void aplicarEstiloAbrir() {
@@ -80,10 +98,13 @@ public class BotaoCampo extends JButton
 		
 		if(campo.isMinado()) {
 			setBackground(BG_EXPLODIR);
+			setText("");
+			setIcon(BOMBA_ICON);
 			return;
 		}
 		
 		setBackground(BG_PADRAO);
+		setIcon(null);
 		
 		switch (campo.minasNaVizinhanca()) {
 		case 1:
