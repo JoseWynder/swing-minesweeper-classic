@@ -15,6 +15,7 @@ public class BotaoCampo extends JButton
 	implements CampoObservador, MouseListener {
 
 	private final Color BG_PADRAO =new Color(184, 184, 184);
+	private final Color BG_ABRIR =new Color(175, 175, 175);
 	private final Color BG_MARCAR =new Color(184, 184, 184);
 	private final Color BG_EXPLODIR =new Color(217, 29, 32);
 	private final Color TEXTO_VERDE =new Color(0, 100, 0);
@@ -37,7 +38,7 @@ public class BotaoCampo extends JButton
 	private static Icon carregarIconeMarcado() {
 		ImageIcon icon = new ImageIcon(BotaoCampo.class.getResource("/br/com/josewynder/campominado/resources/images/minesweeper_flag.png"));
 		Image img = icon.getImage()
-				.getScaledInstance(50, 50, Image.SCALE_DEFAULT);
+				.getScaledInstance(55, 55, Image.SCALE_DEFAULT);
 		return new ImageIcon(img);
 	}
 
@@ -103,7 +104,7 @@ public class BotaoCampo extends JButton
 			return;
 		}
 		
-		setBackground(BG_PADRAO);
+		setBackground(BG_ABRIR);
 		setIcon(null);
 		
 		switch (campo.minasNaVizinhanca()) {

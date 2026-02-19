@@ -2,9 +2,7 @@ package br.com.josewynder.campominado.visao;
 
 import java.awt.GridLayout;
 
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 import br.com.josewynder.campominado.modelo.Tabuleiro;
 
@@ -12,7 +10,7 @@ import br.com.josewynder.campominado.modelo.Tabuleiro;
 public class PainelTabuleiro extends JPanel {
 	
 	public PainelTabuleiro(Tabuleiro tabuleiro) {
-		
+		setBorder(BorderFactory.createEmptyBorder(0, 5, 5, 5));
 		setLayout(new GridLayout(tabuleiro.getLinhas(), tabuleiro.getColunas()));
 		
 		
