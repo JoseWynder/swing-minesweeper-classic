@@ -9,12 +9,12 @@ import br.com.josewynder.campominado.visao.PainelTabuleiro;
 public class CampoMinado extends JFrame {
 
 	public CampoMinado() {
-		Tabuleiro tabuleiro = new Tabuleiro(5, 9, 6); // Valor original: (10, 18, 30)
+		Tabuleiro tabuleiro = new Tabuleiro(6, 8, 7);
 
 		add(new PainelTabuleiro(tabuleiro));
 		
 		setTitle("Campo Minado");
-		setSize(517, 328); // Valor original: (690, 438)
+		setSize(480, 360);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE); // DISPOSE_ON_CLOSE
 		setVisible(true);

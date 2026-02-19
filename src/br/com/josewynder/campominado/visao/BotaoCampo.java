@@ -37,14 +37,14 @@ public class BotaoCampo extends JButton
 	private static Icon carregarIconeMarcado() {
 		ImageIcon icon = new ImageIcon(BotaoCampo.class.getResource("/br/com/josewynder/campominado/resources/images/minesweeper_flag.png"));
 		Image img = icon.getImage()
-				.getScaledInstance(48, 48, Image.SCALE_DEFAULT);
+				.getScaledInstance(50, 50, Image.SCALE_DEFAULT);
 		return new ImageIcon(img);
 	}
 
 	private static Icon carregarIconeBomba() {
 		ImageIcon icon = new ImageIcon(BotaoCampo.class.getResource("/br/com/josewynder/campominado/resources/images/bomb.png"));
 		Image img = icon.getImage()
-				.getScaledInstance(45, 45, Image.SCALE_DEFAULT);
+				.getScaledInstance(40, 40, Image.SCALE_DEFAULT);
 		return new ImageIcon(img);
 	}
 
