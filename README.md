@@ -35,29 +35,20 @@ Não utiliza frameworks ou ferramentas de build como Maven ou Gradle.
 ## <p align="center">🧱 Arquitetura</p>
 
 <p align="center">
-modelo • visao
-</p>
-
-<p align="center">
 <strong>Modelo</strong><br>
-Responsável pela regra de negócio do jogo:<br>
-• Controle de estado dos campos<br>
-• Distribuição de minas<br>
-• Lógica de abertura de campos adjacentes<br>
-• Emissão de eventos
+Responsável pela regra de negócio do jogo, incluindo controle de estado dos campos, 
+distribuição de minas, lógica de abertura de campos adjacentes e emissão de eventos.
 </p>
 
 <p align="center">
 <strong>Visão</strong><br>
-Responsável pela interface gráfica:<br>
-• Representação visual dos campos<br>
-• Interação do usuário<br>
-• Atualização da interface via eventos do modelo
+Responsável pela interface gráfica, contemplando a representação visual dos campos, 
+interação do usuário e atualização da interface com base nos eventos emitidos pelo modelo.
 </p>
 
 <p align="center">
-A comunicação entre as camadas ocorre por meio do padrão <strong>Observer</strong>,
-permitindo desacoplamento entre lógica e interface.
+A comunicação entre as camadas ocorre por meio do padrão <strong>Observer</strong>, 
+permitindo desacoplamento entre lógica de domínio e interface gráfica.
 </p>
 
 ---
