@@ -8,22 +8,11 @@ Implementação do clássico Campo Minado utilizando Java puro e Swing.
 
 ## 📌 Sobre o Projeto
 
-Este projeto consiste em uma implementação do clássico jogo Campo Minado utilizando Java e Swing para construção da interface gráfica.
+Este projeto consiste em uma implementação do clássico jogo Campo Minado utilizando Java e a biblioteca gráfica Swing para construção da interface desktop.
 
-A aplicação foi inicialmente desenvolvida em versão console e posteriormente evoluída para uma interface desktop, permitindo trabalhar tanto a lógica do jogo quanto conceitos de organização de código orientado a objetos.
+A aplicação foi inicialmente desenvolvida em versão console e posteriormente evoluída para uma interface gráfica, permitindo trabalhar tanto a lógica do jogo quanto conceitos fundamentais de programação orientada a objetos, tratamento de eventos e construção de interfaces em Java.
 
-O projeto foi estruturado com separação entre modelo e visão, permitindo que a lógica de domínio permaneça desacoplada da interface gráfica.
-
----
-
-## ⚙️ Tecnologias Utilizadas
-
-* Java
-* Swing
-* Programação Orientada a Objetos
-* Padrão Observer
-
-O projeto não utiliza frameworks ou ferramentas de build como Maven ou Gradle, sendo construído apenas com recursos nativos da linguagem.
+O projeto foi estruturado com separação entre modelo e visão, utilizando o padrão Observer para comunicação entre as camadas e mantendo a lógica de domínio desacoplada da interface gráfica.
 
 ---
 
